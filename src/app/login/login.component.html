@@ -1,0 +1,15 @@
+<md-content>
+<label>
+  login works!
+</label>
+<form class="example-form">
+  <md-input-container>
+    <input mdInput mdInput [(ngModel)]="username" name="username" placeholder="Username">
+  </md-input-container>
+  <md-input-container>      
+    <input type="password" mdInput [(ngModel)]="password" name="password" placeholder="User Password">
+  </md-input-container>
+   {{user | json}}
+  <button md-button (click)="login({username:username,password:password})">Button</button>
+</form>
+</md-content>
