@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdButtonModule,MdContentModule,MdInputModule, MdCheckboxModule,MdTabsModule,MdToolbarModule,MdSidenavModule} from '@angular/material';
+import { MdButtonModule,MdInputModule, MdCheckboxModule,MdTabsModule,MdToolbarModule,MdSidenavModule} from '@angular/material';
 // import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -25,6 +25,7 @@ const appRoutes: Routes = [
   { path: '**', component: PageNotFoundComponent }
 ];
 
+//    MdContentModule,
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,8 +38,7 @@ const appRoutes: Routes = [
     MdCheckboxModule,
     MdTabsModule,
     MdToolbarModule,
-    MdSidenavModule,
-    MdContentModule
+    MdSidenavModule
   ],
   imports: [
     FormsModule, 
@@ -51,7 +51,6 @@ const appRoutes: Routes = [
     MdTabsModule,
     MdToolbarModule,
     MdSidenavModule,
-    MdContentModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
