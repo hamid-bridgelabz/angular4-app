@@ -3,15 +3,19 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdButtonModule,MdInputModule, MdCheckboxModule,MdTabsModule,MdToolbarModule,MdSidenavModule} from '@angular/material';
+import { MdButtonModule,MdMenuModule,MdInputModule,MdCardModule,MdIconModule,
+         MdCheckboxModule,MdTabsModule,MdToolbarModule,MdSidenavModule,MdGridListModule,MdListModule
+        } from '@angular/material';
 // import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
+  { path:'home', component: HomeComponent},
   // { path: 'hero/:id',      component: HeroDetailComponent },
   // {
   //   path: 'heroes',
@@ -30,7 +34,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     LoginComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    HomeComponent
   ],
   exports:[
     MdButtonModule,
@@ -38,7 +43,10 @@ const appRoutes: Routes = [
     MdCheckboxModule,
     MdTabsModule,
     MdToolbarModule,
-    MdSidenavModule
+    MdSidenavModule,
+    MdMenuModule,
+    MdIconModule,
+    MdCardModule
   ],
   imports: [
     FormsModule, 
@@ -50,6 +58,9 @@ const appRoutes: Routes = [
     MdCheckboxModule,
     MdTabsModule,
     MdToolbarModule,
+    MdMenuModule,
+    MdIconModule,
+    MdCardModule,
     MdSidenavModule,
     RouterModule.forRoot(
       appRoutes,
